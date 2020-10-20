@@ -1,11 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
-import React from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import ExpenseDashboardPage from 'components/ExpenseDashboardPage';
-import AddExpensePage from 'components/AddExpensePage';
-import EditExpensePage from 'components/EditExpensePage';
+import AddExpensePage from 'components/addExpense';
+import EditExpensePage from 'components/editExpense';
 import HelpPage from 'components/HelpPage';
 import NotFoundPage from 'components/NotFoundPage';
 import Header from 'components/Header';
