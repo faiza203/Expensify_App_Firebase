@@ -6,7 +6,8 @@ import { SingleDatePicker } from 'react-dates';
 import { Link, NavLink } from 'react-router-dom';
 import numeral from 'numeral';
 import {DateRangePicker} from "react-dates"
-import {selectExpenses , selectExpensesTotal} from "./pageTwo"
+import { selectExpensesTotal , selectExpenses} from "./pageTwo";
+
 // 1- Actions 
 // i- Expenses
 // ADD_EXPENSE
