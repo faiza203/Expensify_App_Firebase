@@ -1,15 +1,16 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import { AppRouter, configureStore } from "./pageTwo"
-import 'normalize.css/normalize.css';
-import 'react-dates/lib/css/_datepicker.css';
+import React from "react";
+// import { Provider } from "react-redux";
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import {registerPage} from "./pageOne"
 
-const store = configureStore();
-
-function App (){
-  return <Provider store={store}>
-  <AppRouter />
-</Provider>
-
-}
-export default App();
+function AppRouter (){
+   return   ( <BrowserRouter>
+    <div>
+      <Switch>
+        <Route path="/" component={registerPage} exact={true} />
+      </Switch>
+    </div>
+  </BrowserRouter>);
+}  
+const App = AppRouter;
+export default App;
