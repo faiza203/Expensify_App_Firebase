@@ -1,5 +1,5 @@
 import React from "react";
-// import uuid from "uuid";
+import { Link } from "react-router-dom";
 
 // Register page 
 export const registerPage = () => (
@@ -46,11 +46,15 @@ export const loginPage = () => (
     </div>
 );
 // Create Page 
-export const createExpensePage = (
+export const createTodoPage =  () =>(
     <form>
-    <input type="text" id="amount"></input>
-    <input type="text" id="description"></input>
-    <input type="text" ></input>
-    <input type="text"></input>
+    <input type="text" id="todo" placeholder="Write todo here" required></input>
+  <button>Add</button>
     </form>
+);
+// Not Found Page
+export const notFoundPage = () => (
+    <div>
+    <p>404</p> <Link to="/">Home Page</Link>
+    </div>
 )
