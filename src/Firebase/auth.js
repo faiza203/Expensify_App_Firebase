@@ -29,3 +29,18 @@ export const signUp = (e) => {
             })
     }
 }
+export const signIn = (e) => {
+    e.preventDefault();
+    const { name, email, password } = e.target.elements;
+        const promise = firebase.auth()
+            .signInWithEmailAndPassword(email.value, password.value)
+            .then(() => {
+                alert("Successfully Login");
+                let currentUrl = window.location.href;
+                window.location.href = (currentUrl + "addTodo")
+            }
+            ).catch((err) => {
+                alert(err)
+            })
+    }
+
