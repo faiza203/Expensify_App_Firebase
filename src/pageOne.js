@@ -1,28 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { signUp } from "./Firebase/auth"
 // Register page 
 export const registerPage = () => (
     <div>
-        <form>
+        <form onSubmit={signUp}>
             <label>
                 Name :
   </label>
             <input id="name" type="text" placeholder="Please Enter Name Here" required />
-            <label>
-                Password :
-  </label>
-            <input id="password" type="password" placeholder="  Please Enter Password" required />
             <label>
                 Email :
   </label>
             <input id="email" type="email" placeholder="
   Please Enter Email" required />
             <label>
+                Password :
+</label>
+            <input id="password" type="password" placeholder="  Please Enter Password" required />
+
+            <label>
                 Confirm Password
   </label>
-            <input id="confirm_password" type="password" placeholder="Please Rewrite Password" required />
+            <input id="confirmPassword" type="password" placeholder="Please Rewrite Password" required />
+            <button id="register" type="submit">Register</button>
         </form>
+        <button id="loginPage" type="button"><Link to="/login">Login</Link></button>
     </div>
 );
 // Login page 
@@ -42,19 +45,7 @@ export const loginPage = () => (
   </label>
             <input id="email" type="email" placeholder="
   Please Enter Email" required />
+            <button id="login" type="submit">Login</button>
         </form>
     </div>
 );
-// Create Page 
-export const createTodoPage =  () =>(
-    <form>
-    <input type="text" id="todo" placeholder="Write todo here" required></input>
-  <button>Add</button>
-    </form>
-);
-// Not Found Page
-export const notFoundPage = () => (
-    <div>
-    <p>404</p> <Link to="/">Home Page</Link>
-    </div>
-)

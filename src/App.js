@@ -1,8 +1,8 @@
 import React from "react";
 // import { Provider } from "react-redux";
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
-import {registerPage , loginPage , createTodoPage, notFoundPage} from "./pageOne"
-
+import {registerPage , loginPage } from "./pageOne";
+import {createTodoPage, notFoundPage} from "./pageTwo"
 function AppRouter (){
    return   ( <BrowserRouter>
     <div>
